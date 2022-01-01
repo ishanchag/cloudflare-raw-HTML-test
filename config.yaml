@@ -1,0 +1,157 @@
+baseURL: "/"
+title: Ishan Chag
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Ishan Chag
+  description: "ExampleSite description"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Me
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: ""
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "‹ Home ›" # HOME TITLE TEXT
+    #icon: "https://i.pinimg.com/originals/9e/45/84/9e45844486ed3d256eb77237da7c1536.png"
+    iconHeight: 30
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: "Hi there. I'm Ishan \U0001F44B"
+    subtitle: "My name is Ishan Chag, welcome to my website! This site is still under construction so please be patient. Give me a 👍🏽 on YouTube or a 🌟 on Github."
+    # imageUrl: "<img location>"
+    # imageWidth: 0
+    # imageHeight: 0
+    # imageTitle: 
+    buttons:
+      - name: About
+        url: /about/
+      - name: Posts
+        url: /blog/
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: My name is Ishan Chag, welcome to my website! This site is still under construction so please be patient
+
+  socialIcons:
+    - name: youtube
+      url: "https://www.youtube.com/channel/UCYoH_f4nY5vj8wpReyOMAcA"
+    - name: github
+      url: "https://github.com/ishanchag"
+    - name: instagram
+      url: "https://www.instagram.com/ishan_chag/"
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/<path_to_repo>/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+
+  
+        
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+        
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+    - identifier: blog
+      name: Blog 
+      url: /blog/
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 50
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 60
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 20
+    - identifier: youtube
+      name: YouTube
+      url: https://www.youtube.com/channel/UCYoH_f4nY5vj8wpReyOMAcA
+      weight: 70
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+# pygmentsUseClasses: true
+# markup:
+#     highlight:
+#         # anchorLineNos: true
+#         codeFences: true
+#         guessSyntax: true
+#         lineNos: true
+#         style: monokai
